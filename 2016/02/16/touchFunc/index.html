@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>移动触摸简单封装 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455var touchFunc=function(obj,type,func)&amp;#123;	var init=&amp;#123;		x:5,		y:5,		sx:0,		sy:0,		ex:0,		ey:0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动触摸简单封装">
+<meta property="og:url" content="http://yoursite.com/2016/02/16/touchFunc/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455var touchFunc=function(obj,type,func)&amp;#123;	var init=&amp;#123;		x:5,		y:5,		sx:0,		sy:0,		ex:0,		ey:0">
+<meta property="og:updated_time" content="2016-02-16T15:03:28.689Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动触摸简单封装">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455var touchFunc=function(obj,type,func)&amp;#123;	var init=&amp;#123;		x:5,		y:5,		sx:0,		sy:0,		ex:0,		ey:0">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-touchFunc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/16/touchFunc/" class="article-date">
+  <time datetime="2016-02-16T15:01:25.000Z" itemprop="datePublished">2016-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      移动触摸简单封装
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> touchFunc=function(obj,type,<span class="func"><span class="keyword">func</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> <span class="keyword">init</span>=&#123;</span><br><span class="line">		x:<span class="number">5</span>,</span><br><span class="line">		y:<span class="number">5</span>,</span><br><span class="line">		sx:<span class="number">0</span>,</span><br><span class="line">		sy:<span class="number">0</span>,</span><br><span class="line">		ex:<span class="number">0</span>,</span><br><span class="line">		ey:<span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> type=type.toLowerCase();</span><br><span class="line">	<span class="keyword">var</span> sTime=<span class="number">0</span>,eTime=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	obj.addEventListener(<span class="string">"touchstart"</span>,function()&#123;</span><br><span class="line">		sTime= new <span class="type">Date</span>().getTime();</span><br><span class="line">		<span class="keyword">init</span>.sx=event.targetTouches[<span class="number">0</span>].pageX;</span><br><span class="line">		<span class="keyword">init</span>.sy=event.targetTouches[<span class="number">0</span>].pageY;</span><br><span class="line">		<span class="keyword">init</span>.ex=<span class="keyword">init</span>.sx;</span><br><span class="line">		<span class="keyword">init</span>.ey=<span class="keyword">init</span>.sy;</span><br><span class="line">		<span class="keyword">if</span> (type.indexOf(<span class="string">"start"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;</span><br><span class="line">	&#125;,<span class="literal">false</span>);</span><br><span class="line">	obj.addEventListener(<span class="string">"touchmove"</span>,function()&#123;</span><br><span class="line">		event.preventdefault();</span><br><span class="line">		<span class="keyword">init</span>.ex=event.targetTouches[<span class="number">0</span>].pageX;</span><br><span class="line">		<span class="keyword">init</span>.ey=event.targetTouches[<span class="number">0</span>].pageY;</span><br><span class="line">		<span class="keyword">if</span> (type.indexOf(<span class="string">"move"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;</span><br><span class="line">	&#125;,<span class="literal">false</span>);</span><br><span class="line">	obj.addEventListener(<span class="string">"touchend"</span>,function()&#123;</span><br><span class="line">		<span class="keyword">var</span> changeX=<span class="keyword">init</span>.ex-<span class="keyword">init</span>.sx;</span><br><span class="line">		<span class="keyword">var</span> changeY=<span class="keyword">init</span>.ey-<span class="keyword">init</span>.sy;</span><br><span class="line">		<span class="keyword">if</span>(<span class="type">Math</span>.<span class="built_in">abs</span>(changeX)&gt;<span class="type">Math</span>.<span class="built_in">abs</span>(changeY)&amp;&amp;<span class="type">Math</span>.<span class="built_in">abs</span>(changeY)&gt;<span class="keyword">init</span>.y)&#123;</span><br><span class="line">			<span class="comment">//左右事件</span></span><br><span class="line">			<span class="keyword">if</span>(changeX&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">"left"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">"right"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="type">Math</span>.<span class="built_in">abs</span>(changeX)&lt;<span class="type">Math</span>.<span class="built_in">abs</span>(changeY)&amp;&amp;<span class="type">Math</span>.<span class="built_in">abs</span>(changeX)&gt;<span class="keyword">init</span>.x)&#123;</span><br><span class="line">			<span class="comment">//上下事件</span></span><br><span class="line">			<span class="keyword">if</span>(changeY&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">"top"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">"down"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="type">Math</span>.<span class="built_in">abs</span>(changeX)&lt;<span class="keyword">init</span>.x&amp;&amp;<span class="type">Math</span>.<span class="built_in">abs</span>(changeY)&lt;<span class="keyword">init</span>.y)&#123;</span><br><span class="line">			eTime=new <span class="type">Date</span>().getTime();</span><br><span class="line">			<span class="comment">//点击事件，此处根据事件差细分</span></span><br><span class="line">			<span class="keyword">if</span>((eTime-sTime)&gt;<span class="number">300</span>)&#123;</span><br><span class="line">				<span class="keyword">if</span>(type.indexOf(<span class="string">"long"</span>!=-<span class="number">1</span>)) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;<span class="comment">//长按</span></span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="keyword">if</span> (type.indexOf(<span class="string">"click"</span>)!=-<span class="number">1</span>) <span class="func"><span class="keyword">func</span><span class="params">()</span></span>;<span class="comment">//当点击事件</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,<span class="literal">false</span>)</span><br><span class="line">&#125;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="cip2pwy1500013gsai40s0jcv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/17/jqinput/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jQuery输入字数监听
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/01/27/javascript object/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面向对象的程序设计</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/05/20160605/">【学习】基于用户行为的图片等资源预加载</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/18/Thoughts/">Thoughts</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/17/jqinput/">jQuery输入字数监听</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/16/touchFunc/">移动触摸简单封装</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/27/javascript object/">面向对象的程序设计</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

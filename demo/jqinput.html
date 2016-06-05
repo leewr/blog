@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flexible账户管理</title>
+	<meta content="yes" name="apple-mobile-web-app-capable"> 
+	<meta content="yes" name="apple-touch-fullscreen"> 
+	
+	<meta content="telephone=no,email=no" name="format-detection"> 
+	<link rel="apple-touch-icon" href="favicon.png"> 
+  	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon"> 
+
+	<script src="js/flexible.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/m.css" />
+	<link rel="stylesheet" href="css/iconfont.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+</head>
+<body class="fix-pbhieght">
+<div class="section-page">	
+	<header>
+		<div class="headwrap">
+			<div class="return-back">
+				<i class="icon iconfont">&#xe610;</i>
+				<span>返回</span>
+			</div>
+			<div class="head-search">
+				<i class="icon iconfont">&#xe604</i>
+			</div>
+			<!-- <div class="userbox">
+				<div class="userSelect">
+					<i class="icon iconfont iconfuzhi">&#xe600;</i>
+				</div>
+			</div> -->
+			<p class="section-tit">简介</p>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<div class="item-section">
+		<div class="info-edit-box">
+			<div class="inof-editin">
+				<textarea name="" id="textarea">我是某某大学一名大三学生，所学专业是艺术设计.主修动画等... </textarea> 
+				<span class="word-num"><em>0</em>/40</span>
+			</div>
+			<script type="text/javascript">
+			$("#textarea").bind("input",function(){
+				$(".word-num em").text($(this).val().length);
+			})
+			</script>
+		</div>
+	</div>	
+</div>
+</body>
+</html>
