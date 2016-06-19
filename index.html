@@ -60,6 +60,111 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sass" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/19/sass/" class="article-date">
+  <time datetime="2016-06-19T02:42:44.332Z" itemprop="datePublished">2016-06-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>sass语法</p>
+<p>###文件后缀名<br>sass有.sass和.scss两种后缀文件名。.sass是不使用大括号和分号。.scss怎么是平常使用<br>css文件格式。常规使用.scss文件格式，以避免出现sass格式错误而出现的编译错误。</p>
+<p>###文件导入<br>sass的文件导入采用@import ‘文件名’的方式，在此您可以不添加后缀名。sass导入后会生成一个文件，若以@import ‘reset.css’的方式导入，择会以css方式导入，并不会生成一个文件。</p>
+<p>###变量<br>sass变量有常规变量采用$开头，后面紧跟变量名，而变量值和变量名之间添加冒号（:）分隔开，如果后面添加！important则为默认值。</p>
+<p>####变量类型</p>
+<p>###嵌套<br>选择器嵌套<br>属性嵌套</p>
+<p>###@at-root跳出嵌套</p>
+<p>###mixin 混合</p>
+<p>###继承 @extend</p>
+<p>###函数@function</p>
+<p>###运算</p>
+<p>###条件判断及循环</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/19/sass/" data-id="ciplzx3300002bcsanasf3yrg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javascriptvar" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/14/javascriptvar/" class="article-date">
+  <time datetime="2016-06-13T23:12:02.057Z" itemprop="datePublished">2016-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/14/javascriptvar/">JavaScript 数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>javascript中有基本类型null，undefined，Number，string，boolean，和引用类型对象Object；</p>
+<p>JavaScript是松散类型，可以采用typeof来</p>
+<p>##Undefined类型<br>undefined类型只有一个值即undefined。在使用var定义变量但未对其初始化时，此时变量的值就为undefined。</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  <span class="keyword">message</span>;</span><br><span class="line">alert(<span class="keyword">message</span>==undefined); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>包含未经定义值的变量和未定义的变量两者是不一样的。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message;</span><br><span class="line">alert(<span class="keyword">typeof</span> message);<span class="comment">//undefined;</span></span><br><span class="line">alert(age);<span class="comment">//产生错误;</span></span><br><span class="line">alert(<span class="keyword">typeof</span> age);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>上面可以看到当未被初始化的变量获取其数据类型时，此时是undefined。</p>
+<p>##Null类型<br>Null数据类型只包含唯一的值即null；在初始化变量值时候，常将不需要设置值得时候显性的设置为null；</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> car=<span class="literal">null</span>;</span><br><span class="line">alert(car);<span class="comment">//null</span></span><br><span class="line">alert(<span class="keyword">typeof</span> car);<span class="comment">//Object；</span></span><br><span class="line">alert(car==<span class="literal">undefined</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的一点是，typeof null的数据类型显示object；null是一个空对象指针，所以显示为一个object；<br>实际上undefined值是派生自null，ECMA-262规定两者相等操作符为true；null和undefined虽然==true；当两者用法完全不同。</p>
+<p>##boolean类型<br>boolean类型即两个字面量：true和false；<br>这两个值与数字值是不一样的true不一等等于1；false也不一定等于0；<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> found</span>=<span class="literal">true</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> lost</span>=<span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
+<p>Boolean类型区分大小写，True，和False都不是布尔值，是标识符；<br>boolean类型的转换：任何一个数据类型的值调用Boolean()函数的时候，总会返回一个Boolean值。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> found</span>=<span class="literal">true</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(found));<span class="comment">//ture</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> str</span>=<span class="string">""</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(str));<span class="comment">//false空字符串布尔值转化为false</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> strs</span>=<span class="string">"asdf"</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(strs));<span class="comment">//true非空字符串</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> num</span>=<span class="number">10</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(num));<span class="comment">//true任何非零数字值</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> arr</span>=[];</span><br><span class="line">alert(<span class="typename">Boolean</span>(arr));<span class="comment">//true任何对象</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> a</span>=<span class="literal">null</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(a));<span class="comment">//false null转换为false</span></span><br></pre></td></tr></table></figure>
+<p>在流程控制语句中会自动执行相应的Boolean转换规则。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">message</span>=<span class="string">"hello world"</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">message</span>)&#123;</span><br><span class="line">	alert(<span class="string">"value is ture"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>##Number类型<br>二进制、十进制、十六进制、八进制等数字类型。八进制的第一位必须为0，然后八进制的序列是0-7；如果数字学列超出了范围，那么前导0将被忽略，当做十进制解析。十六进制字面值前两位必须为0x，后面跟字面0-9、a-f的。其中a-f可以大写也可以小写。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> intnum</span>=<span class="number">55</span> <span class="comment">//整数</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> octalNum1</span>=<span class="number">070</span> <span class="comment">//八进制的56；</span></span><br></pre></td></tr></table></figure></p>
+<p>###浮点数值<br>javascript中并没有规定特殊的浮点数类型。浮点数值内存空间为整数数值的两倍<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> floatNum</span>=<span class="number">1.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum1</span>=<span class="number">0.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum2</span>=<span class="number">.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum3</span>=<span class="number">1.0</span>;</span><br></pre></td></tr></table></figure></p>
+<p>如果小数点后为0，那么将会转换为整数。</p>
+<p>对于极大和极小的数值，可以采用科学计数法e表示浮点数。表示方法为前面一个数值，中间为小写或大写的e，后面是10的幂指数。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> floatnum</span>=<span class="number">1.2e3</span>;<span class="comment">//等于12000；</span></span><br></pre></td></tr></table></figure></p>
+<p>浮点数计算的时候不准确性：0.1+0.2的值为0.30000000000000004，这个小小的误差会到导致无法测试特定的浮点数值。<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span><span class="comment">(a+b==0.3)</span>&#123;<span class="comment">//我要这么做</span></span><br><span class="line">	alert<span class="comment">("you got 0.3")</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###数值范围<br>数值有一定的大小范围，多数浏览器中这个是是5e-324；大多数浏览器中Number.MAX_VALUE和Number.MIN_VALUE保存了最大和最小的数值。<br>要想确定一个数值是否在-Infinity和Infinity中间，可以使用isFinite()函数。这个函数在参数在最小值和最大值之间会返回true；</p>
+<p>###NaN<br>NaN非数值。这个数值表示在本来要返回一个数值的操作未返回的情况。NaN不等于任何数值。NaN也不等于本身。任何涉及NaN操作都返回NaN；任何数除以0都返回NaN。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span><span class="params">(NaN==NaN)</span></span> <span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
+<p>isNaN()函数，函数接受一个参数，可以是任何类型，函数帮我们确定参数是否是“不是数字”，不是数字返回true。<br>isNan()函数也适用对象。当一个对象作为参数的时候，会先调用对象的valueOf()，然后确认其参数是否可以转换为数值，如果不能则调用toString()方法进行转换。</p>
+<p>###数值转换<br>数值转换的基本规则是：<br>a、如果是Boolean值，true和false分别转换为1和0.<br>b、null和undefined返回0。<br>c、如果传入的是数值，则返回这个数值。<br>d、如果是字符串则：<br>    1.字符串只包含数字，如“123”则返回整数。<br>    2.字符串中含浮点格式“1.1”，返回浮点数值。<br>    3.包含十六进制，“ox”则转换为十进制整数值。<br>    4.空字符串转化为0。<br>    5.其余的则转换为NAN。<br>数值转化中有三个基本函数。Number()、parseInt()、pareseFloat(),分别为转换任何数据类型、转换为整数和浮点数据累心。常见制定第二个参数类型为10是很有必要的。</p>
+<p>##String类型</p>
+<p>##组成<br>String类型是由多个16位的Unicode组成。</p>
+<p>##转义字符<br>常见的\n,\b,\r,\等。换行、空格、回车、斜杠等。<br>字符串可以由str.length获得其长度。当字符串中包含双字节字符，length可能不会反悔准确的字符数目。</p>
+<p>##字符串拼接<br>字符串一旦创建就无法改变。所以当需要改变字符串值得时候需要重新赋值改变。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> lang</span>=<span class="string">"java"</span>;</span><br><span class="line">lang=lang+<span class="string">"script"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>##转换为字符串<br>toString()方法可以将每一个值转换为相应的字符串表现。toString以十进制返回数值的字符串表示。当传入2/8/10/16时能够以相应的进制表示字符串。</p>
+<p>##Object类型</p>
+<p>Object类型是一组数据和功能的集合。</p>
+<p>每个Object都有下列属性和方法。<br>1、constructor–构造函数，保存着当前对象的函数。<br>2、hasOwnProperty–用于检查给定的属性在当前实例中是否存在。<br>3、<br>4、<br>5、toString()<br>6、valueOf()</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/14/javascriptvar/" data-id="ciplzx3340004bcsaxw50fh1q" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20160605" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/05/20160605/" class="article-date">
@@ -87,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/05/20160605/" data-id="cip2q02i40008xcsafzom3on4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/05/20160605/" data-id="ciplzx33h000abcsacnn2qgxh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -124,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/18/Thoughts/" data-id="cip2q02i40007xcsa0leqqcxc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/18/Thoughts/" data-id="ciplzx33e0009bcsa00028aos" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/17/jqinput/" data-id="cip2q02i40002xcsaegdaa972" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/17/jqinput/" data-id="ciplzx3320003bcsa8nc36ijk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="cip2q02hp0001xcsaworzkqcq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="ciplzx32i0001bcsarrd18oxz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/javascript object/" data-id="cip2q02i40003xcsa90kuk1iw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/javascript object/" data-id="ciplzx3360005bcsaq4c4vrol" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/underscore/" data-id="cip2q02h70000xcsa9ud5wpz3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/underscore/" data-id="ciplzx31u0000bcsaj81ixicp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -342,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/border/" data-id="cip2q02i40006xcsaq57m7f6j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/border/" data-id="ciplzx33c0008bcsahgl0u5os" class="article-share-link">Share</a>
       
       
     </footer>
@@ -387,7 +492,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/17/hello-world/" data-id="cip2q02i40005xcsaw8st82pz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/17/hello-world/" data-id="ciplzx33a0007bcsas9ti07ht" class="article-share-link">Share</a>
       
       
     </footer>
@@ -397,84 +502,10 @@
 
 
   
-    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/17/hello/" class="article-date">
-  <time datetime="2016-01-17T10:34:45.000Z" itemprop="datePublished">2016-01-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/17/hello/">viepports解析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在移动端中你或许已经使用过这样的<em>meta</em>声明，但你不一定清楚所有的细节。下面将在这文中向你讲述meta相关的内容。<br>    <meta name="viewport" content="width=device-width,inital-scale=1"></p>
-<h2 id="u6982_u5FF5_uFF1A_u50CF_u7D20_28pixel_29"><a href="#u6982_u5FF5_uFF1A_u50CF_u7D20_28pixel_29" class="headerlink" title="概念：像素(pixel)"></a>概念：像素(pixel)</h2><hr>
-<p>我们所说的像素实际上有<em>设备像素</em>、<em>css像素</em>两种。</p>
-<ol>
-<li>设备像素：设备像素的物理像素，任何设备的物理像素的数量是固定的。</li>
-<li>css像素：为web开发者创造的，在css和javascript中抽象的层。<br>在大多数情况下我们能够利用 screen.width/height,获得具体的设备pixels。如我们在开发中设置一个dix的宽度为200px，当我们对浏览器进行缩放，如200%，此是div的宽度仍然是200px，缩放并没有应为200%而变成了100px。尽管此时它占用了400px设备像素。<br>换据话说，缩放200%一个单位的css像素变成了4倍的pixels。即宽度<em>2高度</em>2。</li>
-</ol>
-<h3 id="100_25_u7F29_u653E"><a href="#100_25_u7F29_u653E" class="headerlink" title="100%缩放"></a>100%缩放</h3><p>在通常情况下我们会在100%缩放条件下测试你的网站，即便用户缩放，css的pixels仍然能够保证你网站的外观比例。</p>
-<h3 id="u5C4F_u5E55_u5C3A_u5BF8_screen_size"><a href="#u5C4F_u5E55_u5C3A_u5BF8_screen_size" class="headerlink" title="屏幕尺寸 screen size"></a>屏幕尺寸 screen size</h3><ul>
-<li>屏幕的尺寸即屏幕的完整大小。</li>
-<li>设备的pixels</li>
-<li>兼容性问题：ie8、9浏览器中处于缩放状态得到的为缩放后屏幕大小的css尺寸</li>
-</ul>
-<h3 id="u6D4F_u89C8_u5668_u5C3A_u5BF8_window_size"><a href="#u6D4F_u89C8_u5668_u5C3A_u5BF8_window_size" class="headerlink" title="浏览器尺寸 window size"></a>浏览器尺寸 window size</h3><ul>
-<li>window.innerWidht/Height获得的浏览器完整尺寸</li>
-<li>兼容性IE不支持，opera用设备pixels来度量。</li>
-</ul>
-<p>我们通过改变浏览器的窗口大小，这些数量将会随之而改变。当我们缩放页面尺寸时如200%，此时我们将获得的浏览器窗口尺寸将会减小。<br>opera却获得的值会变大。是一个放大后的css像素值。</p>
-<p>需要注意的是，窗口内部高度和宽度的尺寸包含了滚动条的尺寸。</p>
-<h3 id="u6EDA_u52A8_u4F4D_u79FB_scroling_offset"><a href="#u6EDA_u52A8_u4F4D_u79FB_scroling_offset" class="headerlink" title="滚动位移 scroling offset"></a>滚动位移 scroling offset</h3><p>window.pageXOffset/pageYOffset</p>
-<ul>
-<li>页面的位移</li>
-<li>单位：csspixels</li>
-<li>兼容性问题：pageXOffset和pageYOffset在IE8之前的版本不支持，使用document.body.sceollLeft/scrollTop来取代。</li>
-</ul>
-<h2 id="u89C6_u7A97_viewport"><a href="#u89C6_u7A97_viewport" class="headerlink" title="视窗 viewport"></a>视窗 viewport</h2><hr>
-<p>viewport的功能在于控制你的网站块容器<html>元素宽度。<br>当你改变浏览器窗口的大小时候，html元素的大小也随之改变。在桌面浏览上，viewport严格等于你的浏览器大小。</html></p>
-<h3 id="viewport_u7684_u503C_document-documentElement-clientWidht/Height"><a href="#viewport_u7684_u503C_document-documentElement-clientWidht/Height" class="headerlink" title="viewport的值 document.documentElement.clientWidht/Height"></a>viewport的值 document.documentElement.clientWidht/Height</h3><p>我们知道document.documentElement实际上就是html元素，html文档的根元素。而viewport是容纳html元素的元素。他是有浏览器的决定的。怎么说，当我们设置html元素25%时，document.documentElement.clientWidth/Height只会给出viewport的尺寸。<br>你可以看这个<a href="http://blog.leewr.com/demo/viewport/index.html" target="_blank" rel="external">demo</a></p>
-<p>那当html宽度大于浏览器的宽度时候，此时的viewport是多少呢？<br>我们设置html 1000px;浏览器窗口小于100时候查看document.documentElement.clientWidht的值可以发现是浏览器的窗口大小值。<br>我们需要记住的就是viewport等于你的浏览器尺寸，不管你页面的内容大小。</p>
-<p>当然我们要细追究下去就是 window.innerWidth/Height包含滚动条<br>document.documentElement.clientWidth/Height不包含滚动条</p>
-<h3 id="u5A92_u4F53_u67E5_u8BE2_media_queries"><a href="#u5A92_u4F53_u67E5_u8BE2_media_queries" class="headerlink" title="媒体查询 media queries"></a>媒体查询 media queries</h3><p>@media css属性，你可以根据页面的特定宽度定义特殊的css规则。例如：</p>
-<pre><code>div.container{width:1000px;}
-@media all and(max-width:1000px){
-    div.container{width:800px;}
-}
-</code></pre><p>如果宽度小于1000px;那么container的宽度为800px;此处的宽度是什么宽度呢？此处的宽度是浏览器的窗口大小。</p>
-<h2 id="u79FB_u52A8_u7AEF_u4E0A_u6D4F_u89C8_u5668_u7684_u95EE_u9898"><a href="#u79FB_u52A8_u7AEF_u4E0A_u6D4F_u89C8_u5668_u7684_u95EE_u9898" class="headerlink" title="移动端上浏览器的问题"></a>移动端上浏览器的问题</h2><hr>
-<p>简言之就是我们无法像pc端一样处理移动端的问题，因为设备宽度的问题。通常只有400px，或者更小。</p>
-<h3 id="layoutviewport__u548C_visual_viewport"><a href="#layoutviewport__u548C_visual_viewport" class="headerlink" title="layoutviewport 和 visual viewport"></a>layoutviewport 和 visual viewport</h3><p>下面两张图片能让你很好的理解这连个viewport<br><img src="/demo/viewport/300958521655944.png" alt=""><br><img src="/demo/viewport/300958547434256.png" alt=""></p>
-<h3 id="zooming__u7F29_u653E"><a href="#zooming__u7F29_u653E" class="headerlink" title="zooming 缩放"></a>zooming 缩放</h3><p>两种viewport都以css的pixels来度量，当你通过缩放改变visualviewport时，layoutviewport保存不变。</p>
-<h3 id="u7406_u89E3layout_viewport"><a href="#u7406_u89E3layout_viewport" class="headerlink" title="理解layout viewport"></a>理解layout viewport</h3><p>解决方法：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-widht,initial-scale=1&quot;&gt;
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/17/hello/" data-id="cip2q02i40004xcsay7a5p5du" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -490,7 +521,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
 
@@ -502,6 +533,14 @@
       <ul>
         
           <li>
+            <a href="/2016/06/19/sass/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/14/javascriptvar/">JavaScript 数据类型</a>
+          </li>
+        
+          <li>
             <a href="/2016/06/05/20160605/">【学习】基于用户行为的图片等资源预加载</a>
           </li>
         
@@ -511,14 +550,6 @@
         
           <li>
             <a href="/2016/02/17/jqinput/">jQuery输入字数监听</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/16/touchFunc/">移动触摸简单封装</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/27/javascript object/">面向对象的程序设计</a>
           </li>
         
       </ul>
