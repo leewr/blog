@@ -62,8 +62,8 @@
   
     <article id="post-javascriptvar" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/06/14/javascriptvar/" class="article-date">
-  <time datetime="2016-06-13T23:12:02.057Z" itemprop="datePublished">2016-06-14</time>
+    <a href="/2016/06/21/javascriptvar/" class="article-date">
+  <time datetime="2016-06-21T14:22:19.983Z" itemprop="datePublished">2016-06-21</time>
 </a>
     
   </div>
@@ -74,7 +74,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/14/javascriptvar/">JavaScript 数据类型</a>
+      <a class="article-title" href="/2016/06/21/javascriptvar/">JavaScript 数据类型</a>
     </h1>
   
 
@@ -84,40 +84,38 @@
       
         <p>javascript中有基本类型null，undefined，Number，string，boolean，和引用类型对象Object；</p>
 <p>JavaScript是松散类型，可以采用typeof来</p>
-<p>##Undefined类型<br>undefined类型只有一个值即undefined。在使用var定义变量但未对其初始化时，此时变量的值就为undefined。</p>
+<h2 id="Undefined_u7C7B_u578B"><a href="#Undefined_u7C7B_u578B" class="headerlink" title="Undefined类型"></a>Undefined类型</h2><p>undefined类型只有一个值即undefined。在使用var定义变量但未对其初始化时，此时变量的值就为undefined。</p>
 <figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  <span class="keyword">message</span>;</span><br><span class="line">alert(<span class="keyword">message</span>==undefined); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <p>包含未经定义值的变量和未定义的变量两者是不一样的。<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message;</span><br><span class="line">alert(<span class="keyword">typeof</span> message);<span class="comment">//undefined;</span></span><br><span class="line">alert(age);<span class="comment">//产生错误;</span></span><br><span class="line">alert(<span class="keyword">typeof</span> age);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
 <p>上面可以看到当未被初始化的变量获取其数据类型时，此时是undefined。</p>
-<p>##Null类型<br>Null数据类型只包含唯一的值即null；在初始化变量值时候，常将不需要设置值得时候显性的设置为null；</p>
+<h2 id="Null_u7C7B_u578B"><a href="#Null_u7C7B_u578B" class="headerlink" title="Null类型"></a>Null类型</h2><p>Null数据类型只包含唯一的值即null；在初始化变量值时候，常将不需要设置值得时候显性的设置为null；</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> car=<span class="literal">null</span>;</span><br><span class="line">alert(car);<span class="comment">//null</span></span><br><span class="line">alert(<span class="keyword">typeof</span> car);<span class="comment">//Object；</span></span><br><span class="line">alert(car==<span class="literal">undefined</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 <p>需要注意的一点是，typeof null的数据类型显示object；null是一个空对象指针，所以显示为一个object；<br>实际上undefined值是派生自null，ECMA-262规定两者相等操作符为true；null和undefined虽然==true；当两者用法完全不同。</p>
-<p>##boolean类型<br>boolean类型即两个字面量：true和false；<br>这两个值与数字值是不一样的true不一等等于1；false也不一定等于0；<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> found</span>=<span class="literal">true</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> lost</span>=<span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
+<h2 id="boolean_u7C7B_u578B"><a href="#boolean_u7C7B_u578B" class="headerlink" title="boolean类型"></a>boolean类型</h2><p>boolean类型即两个字面量：true和false；<br>这两个值与数字值是不一样的true不一等等于1；false也不一定等于0；<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> found</span>=<span class="literal">true</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> lost</span>=<span class="literal">false</span>;</span><br></pre></td></tr></table></figure></p>
 <p>Boolean类型区分大小写，True，和False都不是布尔值，是标识符；<br>boolean类型的转换：任何一个数据类型的值调用Boolean()函数的时候，总会返回一个Boolean值。</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> found</span>=<span class="literal">true</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(found));<span class="comment">//ture</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> str</span>=<span class="string">""</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(str));<span class="comment">//false空字符串布尔值转化为false</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> strs</span>=<span class="string">"asdf"</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(strs));<span class="comment">//true非空字符串</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> num</span>=<span class="number">10</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(num));<span class="comment">//true任何非零数字值</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> arr</span>=[];</span><br><span class="line">alert(<span class="typename">Boolean</span>(arr));<span class="comment">//true任何对象</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> a</span>=<span class="literal">null</span>;</span><br><span class="line">alert(<span class="typename">Boolean</span>(a));<span class="comment">//false null转换为false</span></span><br></pre></td></tr></table></figure>
 <p>在流程控制语句中会自动执行相应的Boolean转换规则。</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">message</span>=<span class="string">"hello world"</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">message</span>)&#123;</span><br><span class="line">	alert(<span class="string">"value is ture"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>##Number类型<br>二进制、十进制、十六进制、八进制等数字类型。八进制的第一位必须为0，然后八进制的序列是0-7；如果数字学列超出了范围，那么前导0将被忽略，当做十进制解析。十六进制字面值前两位必须为0x，后面跟字面0-9、a-f的。其中a-f可以大写也可以小写。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> intnum</span>=<span class="number">55</span> <span class="comment">//整数</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> octalNum1</span>=<span class="number">070</span> <span class="comment">//八进制的56；</span></span><br></pre></td></tr></table></figure></p>
-<p>###浮点数值<br>javascript中并没有规定特殊的浮点数类型。浮点数值内存空间为整数数值的两倍<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> floatNum</span>=<span class="number">1.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum1</span>=<span class="number">0.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum2</span>=<span class="number">.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum3</span>=<span class="number">1.0</span>;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Number_u7C7B_u578B"><a href="#Number_u7C7B_u578B" class="headerlink" title="Number类型"></a>Number类型</h2><p>二进制、十进制、十六进制、八进制等数字类型。八进制的第一位必须为0，然后八进制的序列是0-7；如果数字学列超出了范围，那么前导0将被忽略，当做十进制解析。十六进制字面值前两位必须为0x，后面跟字面0-9、a-f的。其中a-f可以大写也可以小写。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> intnum</span>=<span class="number">55</span> <span class="comment">//整数</span></span><br><span class="line"><span class="variable"><span class="keyword">var</span> octalNum1</span>=<span class="number">070</span> <span class="comment">//八进制的56；</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u6D6E_u70B9_u6570_u503C"><a href="#u6D6E_u70B9_u6570_u503C" class="headerlink" title="浮点数值"></a>浮点数值</h3><p>javascript中并没有规定特殊的浮点数类型。浮点数值内存空间为整数数值的两倍<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> floatNum</span>=<span class="number">1.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum1</span>=<span class="number">0.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum2</span>=<span class="number">.1</span>;</span><br><span class="line"><span class="variable"><span class="keyword">var</span> floatNum3</span>=<span class="number">1.0</span>;</span><br></pre></td></tr></table></figure></p>
 <p>如果小数点后为0，那么将会转换为整数。</p>
 <p>对于极大和极小的数值，可以采用科学计数法e表示浮点数。表示方法为前面一个数值，中间为小写或大写的e，后面是10的幂指数。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> floatnum</span>=<span class="number">1.2e3</span>;<span class="comment">//等于12000；</span></span><br></pre></td></tr></table></figure></p>
 <p>浮点数计算的时候不准确性：0.1+0.2的值为0.30000000000000004，这个小小的误差会到导致无法测试特定的浮点数值。<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span><span class="comment">(a+b==0.3)</span>&#123;<span class="comment">//我要这么做</span></span><br><span class="line">	alert<span class="comment">("you got 0.3")</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>###数值范围<br>数值有一定的大小范围，多数浏览器中这个是是5e-324；大多数浏览器中Number.MAX_VALUE和Number.MIN_VALUE保存了最大和最小的数值。<br>要想确定一个数值是否在-Infinity和Infinity中间，可以使用isFinite()函数。这个函数在参数在最小值和最大值之间会返回true；</p>
+<h3 id="u6570_u503C_u8303_u56F4"><a href="#u6570_u503C_u8303_u56F4" class="headerlink" title="数值范围"></a>数值范围</h3><p>数值有一定的大小范围，多数浏览器中这个是是5e-324；大多数浏览器中Number.MAX_VALUE和Number.MIN_VALUE保存了最大和最小的数值。<br>要想确定一个数值是否在-Infinity和Infinity中间，可以使用isFinite()函数。这个函数在参数在最小值和最大值之间会返回true；</p>
 <p>###NaN<br>NaN非数值。这个数值表示在本来要返回一个数值的操作未返回的情况。NaN不等于任何数值。NaN也不等于本身。任何涉及NaN操作都返回NaN；任何数除以0都返回NaN。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">alert</span><span class="params">(NaN==NaN)</span></span> <span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
 <p>isNaN()函数，函数接受一个参数，可以是任何类型，函数帮我们确定参数是否是“不是数字”，不是数字返回true。<br>isNan()函数也适用对象。当一个对象作为参数的时候，会先调用对象的valueOf()，然后确认其参数是否可以转换为数值，如果不能则调用toString()方法进行转换。</p>
-<p>###数值转换<br>数值转换的基本规则是：<br>a、如果是Boolean值，true和false分别转换为1和0.<br>b、null和undefined返回0。<br>c、如果传入的是数值，则返回这个数值。<br>d、如果是字符串则：<br>    1.字符串只包含数字，如“123”则返回整数。<br>    2.字符串中含浮点格式“1.1”，返回浮点数值。<br>    3.包含十六进制，“ox”则转换为十进制整数值。<br>    4.空字符串转化为0。<br>    5.其余的则转换为NAN。<br>数值转化中有三个基本函数。Number()、parseInt()、pareseFloat(),分别为转换任何数据类型、转换为整数和浮点数据累心。常见制定第二个参数类型为10是很有必要的。</p>
-<p>##String类型</p>
-<p>##组成<br>String类型是由多个16位的Unicode组成。</p>
-<p>##转义字符<br>常见的\n,\b,\r,\等。换行、空格、回车、斜杠等。<br>字符串可以由str.length获得其长度。当字符串中包含双字节字符，length可能不会反悔准确的字符数目。</p>
+<h3 id="u6570_u503C_u8F6C_u6362"><a href="#u6570_u503C_u8F6C_u6362" class="headerlink" title="数值转换"></a>数值转换</h3><p>数值转换的基本规则是：<br>a、如果是Boolean值，true和false分别转换为1和0.<br>b、null和undefined返回0。<br>c、如果传入的是数值，则返回这个数值。<br>d、如果是字符串则：<br>    1.字符串只包含数字，如“123”则返回整数。<br>    2.字符串中含浮点格式“1.1”，返回浮点数值。<br>    3.包含十六进制，“ox”则转换为十进制整数值。<br>    4.空字符串转化为0。<br>    5.其余的则转换为NAN。<br>数值转化中有三个基本函数。Number()、parseInt()、pareseFloat(),分别为转换任何数据类型、转换为整数和浮点数据累心。常见制定第二个参数类型为10是很有必要的。</p>
+<h2 id="String_u7C7B_u578B"><a href="#String_u7C7B_u578B" class="headerlink" title="String类型"></a>String类型</h2><h2 id="u7EC4_u6210"><a href="#u7EC4_u6210" class="headerlink" title="组成"></a>组成</h2><p>String类型是由多个16位的Unicode组成。</p>
+<h2 id="u8F6C_u4E49_u5B57_u7B26"><a href="#u8F6C_u4E49_u5B57_u7B26" class="headerlink" title="转义字符"></a>转义字符</h2><p>常见的\n,\b,\r,\等。换行、空格、回车、斜杠等。<br>字符串可以由str.length获得其长度。当字符串中包含双字节字符，length可能不会反悔准确的字符数目。</p>
 <p>##字符串拼接<br>字符串一旦创建就无法改变。所以当需要改变字符串值得时候需要重新赋值改变。<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> lang</span>=<span class="string">"java"</span>;</span><br><span class="line">lang=lang+<span class="string">"script"</span>;</span><br></pre></td></tr></table></figure></p>
 <p>##转换为字符串<br>toString()方法可以将每一个值转换为相应的字符串表现。toString以十进制返回数值的字符串表示。当传入2/8/10/16时能够以相应的进制表示字符串。</p>
-<p>##Object类型</p>
-<p>Object类型是一组数据和功能的集合。</p>
+<h2 id="Object_u7C7B_u578B"><a href="#Object_u7C7B_u578B" class="headerlink" title="Object类型"></a>Object类型</h2><p>Object类型是一组数据和功能的集合。</p>
 <p>每个Object都有下列属性和方法。<br>1、constructor–构造函数，保存着当前对象的函数。<br>2、hasOwnProperty–用于检查给定的属性在当前实例中是否存在。<br>3、<br>4、<br>5、toString()<br>6、valueOf()</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/14/javascriptvar/" data-id="cippjagoj0003uwsawtnzd7k3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/21/javascriptvar/" data-id="cippjg5nk0003ogsaudbxl1xr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/05/20160605/" data-id="cippjagou0009uwsanfuglcc4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/05/20160605/" data-id="cippjg5nw0009ogsa18xayb9y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/18/Thoughts/" data-id="cippjagot0008uwsa6r7qfmo1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/18/Thoughts/" data-id="cippjg5nv0008ogsanwt9lk8d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +228,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/17/jqinput/" data-id="cippjagoh0002uwsaj2h6bg0l" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/17/jqinput/" data-id="cippjg5ni0002ogsa7hjowi2j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -266,7 +264,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="cippjagnx0001uwsagep9sfwf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="cippjg5nc0001ogsa52at9g38" class="article-share-link">Share</a>
       
       
     </footer>
@@ -319,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/javascript object/" data-id="cippjagom0004uwsaypznwmao" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/javascript object/" data-id="cippjg5nm0004ogsalnvpmtvi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/underscore/" data-id="cippjagnc0000uwsa6y0l9yl0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/underscore/" data-id="cippjg5my0000ogsayu3cvupc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -409,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/border/" data-id="cippjagos0007uwsa1ewm7l6c" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/border/" data-id="cippjg5nt0007ogsa53e29y62" class="article-share-link">Share</a>
       
       
     </footer>
@@ -454,7 +452,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/17/hello-world/" data-id="cippjagoq0006uwsavy3p85ch" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/17/hello-world/" data-id="cippjg5nq0006ogsab92mghjb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -532,7 +530,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/17/hello/" data-id="cippjagon0005uwsaxcu246ht" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/17/hello/" data-id="cippjg5no0005ogsazgq8xpkp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -569,7 +567,7 @@
       <ul>
         
           <li>
-            <a href="/2016/06/14/javascriptvar/">JavaScript 数据类型</a>
+            <a href="/2016/06/21/javascriptvar/">JavaScript 数据类型</a>
           </li>
         
           <li>
