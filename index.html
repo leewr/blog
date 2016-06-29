@@ -62,8 +62,8 @@
   
     <article id="post-sass" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/06/21/sass/" class="article-date">
-  <time datetime="2016-06-21T15:03:24.528Z" itemprop="datePublished">2016-06-21</time>
+    <a href="/2016/06/29/sass/" class="article-date">
+  <time datetime="2016-06-29T14:52:23.228Z" itemprop="datePublished">2016-06-29</time>
 </a>
     
   </div>
@@ -72,14 +72,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title:sass语法</p>
-<h2 id="tags_3Asass"><a href="#tags_3Asass" class="headerlink" title="tags:sass"></a>tags:sass</h2><h3 id="u6587_u4EF6_u540E_u7F00_u540D"><a href="#u6587_u4EF6_u540E_u7F00_u540D" class="headerlink" title="文件后缀名"></a>文件后缀名</h3><p>sass有.sass和.scss两种后缀文件名。.sass是不使用大括号和分号。.scss是平常使用<br>css文件格式。常规使用.scss文件格式，以避免出现sass格式错误而出现的编译错误。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件后缀名为sass的语法</span></span><br><span class="line"><span class="tag">body</span></span><br><span class="line">	<span class="attribute">background</span>：<span class="id">#eee</span></span><br><span class="line">	<span class="attribute">font-size</span><span class="value">:<span class="number">12px</span></span><br><span class="line">p</span><br><span class="line">	background:<span class="hexcolor">#efefef</span></span><br><span class="line">//文件后缀名为scss的语法</span><br><span class="line">body&#123;</span><br><span class="line">	background：<span class="hexcolor">#eee</span>;</span></span><br><span class="line">	<span class="attribute">font-size</span><span class="value">:<span class="number">12px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">background</span><span class="value">:<span class="hexcolor">#efefef</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="u6587_u4EF6_u5BFC_u5165"><a href="#u6587_u4EF6_u5BFC_u5165" class="headerlink" title="文件导入"></a>文件导入</h3><p>sass的文件导入采用@import ‘文件名’的方式，在此您可以不添加后缀名。sass导入后会生成一个文件，若以@import ‘reset.css’的方式导入，择会以css方式导入，并不会生成一个文件。</p>
-<h3 id="u53D8_u91CF"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量</h3><p>sass变量有常规变量采用$开头，后面紧跟变量名，而变量值和变量名之间添加冒号（:）分隔开，如果后面添加！important则为默认值。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//sass style</span></span><br><span class="line"><span class="comment">//-------</span></span><br><span class="line"><span class="variable">$fontsize</span><span class="value">:<span class="number">12px</span> <span class="important">!important</span>;</span></span><br><span class="line"><span class="tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span><span class="value">:<span class="variable">$fontsize</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//css style</span></span><br><span class="line"><span class="comment">//------</span></span><br><span class="line"><span class="tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span><span class="value">:<span class="number">12px</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="title_3Asass_u8BED_u6CD5"><a href="#title_3Asass_u8BED_u6CD5" class="headerlink" title="title:sass语法"></a>title:sass语法</h2><h3 id="u6587_u4EF6_u540E_u7F00_u540D"><a href="#u6587_u4EF6_u540E_u7F00_u540D" class="headerlink" title="文件后缀名"></a>文件后缀名</h3><pre><code>sass有.sass和.scss两种后缀文件名。.sass是不使用大括号和分号。.scss是平常使用css文件格式。常规使用.scss文件格式，以避免出现sass格式错误而出现的编译错误。
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件后缀名为sass的语法</span></span><br><span class="line"><span class="tag">body</span></span><br><span class="line">	<span class="attribute">background</span>：<span class="id">#eee</span></span><br><span class="line">	<span class="attribute">font-size</span><span class="value">:<span class="number">12px</span></span><br><span class="line">p</span><br><span class="line">	background:<span class="hexcolor">#efefef</span></span><br><span class="line">//文件后缀名为scss的语法</span><br><span class="line">body&#123;</span><br><span class="line">	background：<span class="hexcolor">#eee</span>;</span></span><br><span class="line">	<span class="attribute">font-size</span><span class="value">:<span class="number">12px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">background</span><span class="value">:<span class="hexcolor">#efefef</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="u6587_u4EF6_u5BFC_u5165"><a href="#u6587_u4EF6_u5BFC_u5165" class="headerlink" title="文件导入"></a>文件导入</h3><pre><code>sass的文件导入采用@import &apos;文件名&apos;的方式，在此您可以不添加后缀名。sass导入后会生成一个文件，若以@import &apos;reset.css&apos;的方式导入，择会以css方式导入，并不会生成一个文件。
+</code></pre><h3 id="u53D8_u91CF"><a href="#u53D8_u91CF" class="headerlink" title="变量"></a>变量</h3><p>sass变量有常规变量采用$开头，后面紧跟变量名，而变量值和变量名之间添加冒号（:）分隔开，如果后面添加!idefault则为默认值。<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//sass style</span><br><span class="line">//-------</span><br><span class="line"><span class="variable">$fontsize</span>:<span class="number">12</span>px !<span class="keyword">default</span>;</span><br><span class="line">body&#123;</span><br><span class="line">	font-size:<span class="variable">$fontsize</span>;</span><br><span class="line">&#125;</span><br><span class="line">//css style</span><br><span class="line">//------</span><br><span class="line">body&#123;</span><br><span class="line">	font-size:<span class="number">12</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="u9ED8_u8BA4_u53D8_u91CF"><a href="#u9ED8_u8BA4_u53D8_u91CF" class="headerlink" title="默认变量"></a>默认变量</h4><p>sass的默认变量仅需要在值后面加上 !default 即可。<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//sass style</span><br><span class="line"><span class="variable">$baseLightHeight</span>:<span class="number">1.5</span> !<span class="keyword">default</span>;</span><br><span class="line">body&#123;</span><br><span class="line">	line-heihgt:<span class="variable">$baseLightHeight</span>;</span><br><span class="line">&#125; </span><br><span class="line">//css style</span><br><span class="line">body&#123;</span><br><span class="line">	line-height:<span class="number">1.5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>sass的默认变量一般用来设置默认变量，然后根据需求来覆盖、</p>
 <h4 id="u53D8_u91CF_u7C7B_u578B"><a href="#u53D8_u91CF_u7C7B_u578B" class="headerlink" title="变量类型"></a>变量类型</h4><h5 id="u666E_u901A_u53D8_u91CF"><a href="#u666E_u901A_u53D8_u91CF" class="headerlink" title="普通变量"></a>普通变量</h5><p>定义之后可以在任何位置使用。</p>
-<h5 id="u7279_u6B8A_u53D8_u91CF_u4F7F_u7528_u65F6_u9700_u8981__23_7B_24variable_7D__u4F7F_u7528"><a href="#u7279_u6B8A_u53D8_u91CF_u4F7F_u7528_u65F6_u9700_u8981__23_7B_24variable_7D__u4F7F_u7528" class="headerlink" title="特殊变量使用时需要 #{$variable} 使用"></a>特殊变量使用时需要 #{$variable} 使用</h5><p>###嵌套<br>&amp;表示本身</p>
+<h5 id="u7279_u6B8A_u53D8_u91CF_u4F7F_u7528_u65F6_u9700_u8981__23_7B_24variable_7D__u4F7F_u7528"><a href="#u7279_u6B8A_u53D8_u91CF_u4F7F_u7528_u65F6_u9700_u8981__23_7B_24variable_7D__u4F7F_u7528" class="headerlink" title="特殊变量使用时需要 #{$variable} 使用"></a>特殊变量使用时需要 #{$variable} 使用</h5><p>在变量作为属性或在特殊情况下等则必须要以 #{$variables}形式使用。<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//sass style</span></span><br><span class="line"><span class="variable">$borderDirection</span><span class="value">: top !default;</span></span><br><span class="line"><span class="variable">$baseFontSize</span><span class="value">: <span class="number">12px</span> !default;</span></span><br><span class="line"><span class="variable">$baseLineHeight</span><span class="value">:<span class="number">1.5</span> !default;</span></span><br><span class="line"><span class="comment">//应用于class和属性</span></span><br><span class="line"><span class="class">.border-</span>#&#123;<span class="variable">$borderDirection</span>&#125;&#123;</span><br><span class="line">	<span class="attribute">border</span>-#&#123;<span class="variable">$borderDirection</span>&#125;<span class="value">:<span class="number">1px</span> solid <span class="hexcolor">#ccc</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//应用于复杂的属性值</span></span><br><span class="line"><span class="tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">font</span><span class="value">:#&#123;<span class="variable">$baseFontSize</span>&#125;/#&#123;<span class="variable">$baseLineHeight</span>&#125;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="u591A_u503C_u53D8_u91CF"><a href="#u591A_u503C_u53D8_u91CF" class="headerlink" title="多值变量"></a>多值变量</h4><p>多值变量分为list和map类型。简单来说list类型有点像js中的数组，而map类型有点像js中的对象。</p>
+<h5 id="list"><a href="#list" class="headerlink" title="list"></a>list</h5><p>list数据可通过空格，逗号或小括号分隔多个值，可用nth($var,$index)取值。list数据操作还有很多函数。参见[sass Functions][<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank" rel="external">http://sass-lang.com/documentation/Sass/Script/Functions.html</a>]<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一维数据</span></span><br><span class="line"><span class="variable">$px</span><span class="value">:<span class="number">5px</span> <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span>;</span></span><br><span class="line"><span class="comment">//二维数据，相当于js中的二维数组</span></span><br><span class="line"><span class="variable">$px</span><span class="value">:(<span class="number">5px</span> <span class="number">10px</span>) (<span class="number">20px</span> <span class="number">30px</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$linkColor</span><span class="value">: <span class="hexcolor">#08c</span> <span class="hexcolor">#333</span> !default;</span><span class="comment">//第一个为默认值，第二个为鼠标滑过值</span></span><br><span class="line"><span class="tag">a</span>&#123;</span><br><span class="line">	<span class="attribute">color</span><span class="value">:<span class="function">nth</span>(<span class="variable">$linkColor</span>,<span class="number">1</span>);</span></span><br><span class="line">	&amp;<span class="pseudo">:hover</span>&#123;</span><br><span class="line">		<span class="attribute">color</span><span class="value">:<span class="function">nth</span>(<span class="variable">$linkColor</span>,<span class="number">2</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//css style</span><br><span class="line"></span><br><span class="line">a &#123; color: <span class="hexcolor">#08c</span>;</span> &#125;</span><br><span class="line"><span class="tag">a</span><span class="pseudo">:hover</span> &#123; <span class="attribute">color</span><span class="value">: <span class="hexcolor">#333</span>;</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="map"><a href="#map" class="headerlink" title="map"></a>map</h5><p>map数据以key和value成对出现，其中value又可以是list。格式为：$map:(key1:value,key2:value2,key3:value3)。可以通过map-get($map,$key)取值。map数据还有更多函数具体参见[sass function][<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank" rel="external">http://sass-lang.com/documentation/Sass/Script/Functions.html</a>]<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$heading</span>:(h1:<span class="number">2</span>em,h2:<span class="number">1.5</span>em,h3:<span class="number">1.2</span>em);</span><br><span class="line">//使用</span><br><span class="line">@each <span class="variable">$header</span>,<span class="variable">$size</span> <span class="keyword">in</span> <span class="variable">$heading</span>&#123;</span><br><span class="line">	#&#123;<span class="variable">$header</span>&#125;&#123;</span><br><span class="line">		font-size:<span class="variable">$size</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//css</span><br><span class="line">h1 &#123; font-size: <span class="number">2</span>em; &#125;</span><br><span class="line">h2 &#123; font-size: <span class="number">1.5</span>em; &#125;</span><br><span class="line">h3 &#123; font-size: <span class="number">1.2</span>em; &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u5D4C_u5957"><a href="#u5D4C_u5957" class="headerlink" title="嵌套"></a>嵌套</h3><p>&amp;表示本身</p>
 <p>选择器嵌套<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.header</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>:<span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">position</span>:relative;</span><br><span class="line">	<span class="class">.logo</span>&#123;</span><br><span class="line">		<span class="attribute">position</span>:absolute;</span><br><span class="line">		<span class="attribute">left</span>:<span class="number">0</span>;</span><br><span class="line">		<span class="attribute">top</span>:<span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>属性嵌套</p>
 <p>###@at-root跳出嵌套</p>
@@ -98,7 +102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/21/sass/" data-id="ciq0ynyhj000288sa4ic5koii" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/29/sass/" data-id="ciq10490q000280sa2di1lebp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/21/javascriptvar/" data-id="ciq0ynyhj000488sauwxb7rvq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/21/javascriptvar/" data-id="ciq10490u000480sal4z6wrkl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -200,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/05/20160605/" data-id="ciq0ynyhz000a88sagm7jh2rz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/05/20160605/" data-id="ciq104916000a80saz0dderf4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -237,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/18/Thoughts/" data-id="ciq0ynyhz000988saxzr0sb7g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/18/Thoughts/" data-id="ciq104914000980sax5z4m47c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -276,7 +280,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/17/jqinput/" data-id="ciq0ynyhj000388salm3cvcnd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/17/jqinput/" data-id="ciq10490s000380salz32mlaa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -312,7 +316,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="ciq0ynyhj000188saqac6jaso" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/02/16/touchFunc/" data-id="ciq10490n000180sab9u3z2q9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -365,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/javascript object/" data-id="ciq0ynyhz000588sayah8691h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/javascript object/" data-id="ciq10490w000580saa18gio6a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -402,7 +406,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/underscore/" data-id="ciq0ynyh3000088saxglshvnz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/underscore/" data-id="ciq10490a000080saef025tf2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -455,7 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/27/border/" data-id="ciq0ynyhz000888sakixk7vhg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/27/border/" data-id="ciq104912000880sa5rn7ru86" class="article-share-link">Share</a>
       
       
     </footer>
@@ -500,7 +504,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/17/hello-world/" data-id="ciq0ynyhz000788saopmvuti0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/17/hello-world/" data-id="ciq104910000780sag12w7a84" class="article-share-link">Share</a>
       
       
     </footer>
@@ -541,7 +545,7 @@
       <ul>
         
           <li>
-            <a href="/2016/06/21/sass/">(no title)</a>
+            <a href="/2016/06/29/sass/">(no title)</a>
           </li>
         
           <li>
